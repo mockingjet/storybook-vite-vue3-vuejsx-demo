@@ -1,0 +1,25 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+import BaseInput from "./BaseInput";
+
+<Meta title="Input/BaseInput" component={BaseInput} />
+
+export const Template = (args) => <BaseInput {...args} />;
+
+<Story
+  name="Normal"
+  args={{
+    prefix: "Account",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+<Story
+  name="WithType"
+  args={{
+    prefix: "Password",
+    type: "password",
+  }}
+>
+  {Template.bind({})}
+</Story>
